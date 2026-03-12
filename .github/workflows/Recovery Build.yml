@@ -131,7 +131,7 @@ jobs:
       run: |
         git clone ${{ github.event.inputs.COMMON_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.COMMON_PATH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
-
+        git clone https://github.com/transsion-mt6789-recovery/twrp-device_mediatek_mt6789-common -b android-12.1-mks ./device/mediatek/mt6789-common
     - name: Check Build Tree
       uses: haya14busa/action-cond@v1
       id: buildtree
